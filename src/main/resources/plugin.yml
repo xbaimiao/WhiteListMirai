@@ -1,0 +1,4 @@
+name: WhiteListMirai
+version: '${version}'
+main: cn.cubegarden.whitelistmirai.WhiteListMirai
+api-version: 1.17

@@ -1,0 +1,9 @@
+# mirai http api 的 ws链接
+url: "http://localhost:8080/"
+# qq号
+qq: 2157207381
+# 认证Key
+authKey: "INITKEY4f2jsadasVMXq"
+# 可以使用机器人命令的QQ
+adminList:
+  - 3104026189
