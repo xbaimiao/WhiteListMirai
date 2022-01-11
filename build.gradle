@@ -29,7 +29,7 @@ repositories {
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.17-R0.1-SNAPSHOT'
     implementation 'org.greenrobot:eventbus:3.1.1'
-    implementation 'com.xbaimiao:mirai-http-sdk:1.0.2-mini'
+    implementation 'com.xbaimiao:mirai-http-sdk:1.0.3-mini'
 }
 
 def targetJavaVersion = 16

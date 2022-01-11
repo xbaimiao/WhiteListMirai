@@ -1,7 +1,7 @@
 package cn.cubegarden.whitelistmirai;
 
 import com.xbaimiao.mirai.config.WebSocketBotConfig;
-import com.xbaimiao.mirai.event.group.GroupMessageEvent;
+import com.xbaimiao.mirai.event.GroupMessageEvent;
 import com.xbaimiao.mirai.packet.impl.websocket.WebSocketBot;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -33,11 +33,16 @@ public final class WhiteListMirai extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getLogger().info("WhiteListMirai已加载！");
         saveDefaultConfig();
         loadConfig();
         bot = new WebSocketBot(webSocketBotConfig).connect();
         bot.getEventChancel().registerListener(this);
+    }
+
+    @Override
+    public void onDisable() {
+        bot.getEventChancel().unregisterListener(this);
+        bot.disable();
     }
 
     @Subscribe
